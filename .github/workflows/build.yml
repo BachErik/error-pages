@@ -44,4 +44,4 @@ jobs:
         push: true
         platforms: linux/amd64,linux/arm64/v8
         tags: |
-          ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.event_name == 'push' && 'latest' || github.event_name == 'release' && github.event.release.tag_name || 'pr-' }}${{ github.event.pull_request.number || '' }}
+          bacherik/${{ env.IMAGE_NAME }}:${{ github.event_name == 'push' && 'latest' || github.event_name == 'release' && github.event.release.tag_name || 'pr-' }}${{ github.event.pull_request.number || '' }}
