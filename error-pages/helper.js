@@ -43,6 +43,9 @@ function getQuote(error) {
         case 500:
             quotes = FIVE_ZERO_ZERO_QUOTES;
             break;
+        case 501:
+            quotes = FIVE_ZERO_ONE_QUOTES;
+            break;
         case 503:
             quotes = FIVE_ZERO_THREE_QUOTES;
             break;
