@@ -36,17 +36,17 @@ const FIVE_ZERO_FIVE_TO_FIVE_NINE_NINE_QUOTES = [
 
 function getQuote(error) {
     var quotes = [];
-    switch(error) {
-        case 404:
+    switch(true) {
+        case (error == 404):
             quotes = FOUR_ZERO_FOUR_QUOTES;
         break;
-        case 500:
+        case (error == 500):
             quotes = FIVE_ZERO_ZERO_QUOTES;
             break;
-        case 501:
+        case (error == 501):
             quotes = FIVE_ZERO_ONE_QUOTES;
             break;
-        case 503:
+        case (error == 503):
             quotes = FIVE_ZERO_THREE_QUOTES;
             break;
         case (error > 504 && error < 600):
