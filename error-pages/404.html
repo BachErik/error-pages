@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>404: Lost in the Blue</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="helper.js"></script>
     <!-- Playful Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
@@ -113,7 +114,7 @@
         <p>Oops! Looks like you've drifted away into the blue.</p>
         <!-- Random humorous quote -->
         <p id="random-quote"></p>
-        <button onclick="goHome()">Return Home</button>
+        <button onclick="redirectHomepage()">Return Home</button>
 
         <!-- Confetti elements -->
         <div class="confetti" style="left:10%; animation-duration: 2.5s; animation-delay: 0s;"></div>
@@ -124,24 +125,10 @@
     </div>
 
     <script>
-        function goHome() {
-            // Change this URL to your homepage if needed
-            window.location.href = 'https://bacherik.de';
-        }
-
-        // Array with humorous quotes
-        const quotes = [
-            "This page is as rare as bug-free code.",
-            "Oops, there's nothing here – try restarting!",
-            "Looks like we've activated coffee break mode.",
-            "This page went on vacation – try again later!",
-            "The server just had a laughing fit."
-        ];
 
         // When the DOM content is loaded, select and display a random quote
         document.addEventListener('DOMContentLoaded', function () {
-            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-            document.getElementById('random-quote').textContent = randomQuote;
+            document.getElementById('random-quote').textContent = getQuote(404);
         });
     </script>
 </body>

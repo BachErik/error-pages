@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Error 505-599: Unexpected Error</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="helper.js"></script>
     <!-- Playful Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
@@ -113,7 +114,7 @@
         <p>An unexpected error has occurred. Please try again later or contact support.</p>
         <!-- Random humorous quote -->
         <p id="random-quote"></p>
-        <button onclick="goHome()">Return Home</button>
+        <button onclick="redirectHomepage()">Return Home</button>
 
         <!-- Confetti elements -->
         <div class="confetti" style="left:10%; animation-duration: 2.5s; animation-delay: 0s;"></div>
@@ -124,19 +125,8 @@
     </div>
 
     <script>
-        function goHome() {
-            window.location.href = 'https://bacherik.de';
-        }
-        const quotes = [
-            "An error in the error department – sorry for the inconvenience.",
-            "Error 505-599: Something went awry on our end.",
-            "Sometimes the internet has its off days – please try again later.",
-            "Unexpected error: Our developers have been notified.",
-            "Even code has its off moments."
-        ];
         document.addEventListener('DOMContentLoaded', function () {
-            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-            document.getElementById('random-quote').textContent = randomQuote;
+            document.getElementById('random-quote').textContent = getQuote(505);
         });
     </script>
 </body>

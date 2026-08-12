@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>501: Not Implemented</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="helper.js"></script>
     <!-- Playful Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
@@ -113,7 +114,7 @@
         <p>This feature is not implemented yet – please be patient!</p>
         <!-- Random humorous quote -->
         <p id="random-quote"></p>
-        <button onclick="goHome()">Return Home</button>
+        <button onclick="redirectHomepage()">Return Home</button>
 
         <!-- Confetti elements -->
         <div class="confetti" style="left:10%; animation-duration: 2.5s; animation-delay: 0s;"></div>
@@ -124,19 +125,8 @@
     </div>
 
     <script>
-        function goHome() {
-            window.location.href = 'https://bacherik.de';
-        }
-        const quotes = [
-            "501: Not yet implemented, but coming soon!",
-            "This page is under construction – more to come shortly.",
-            "Feature in development – please check back later.",
-            "501: The code is being written as we speak.",
-            "Not implemented yet – maybe in a future release."
-        ];
         document.addEventListener('DOMContentLoaded', function () {
-            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-            document.getElementById('random-quote').textContent = randomQuote;
+            document.getElementById('random-quote').textContent = getQuote(501);
         });
     </script>
 </body>

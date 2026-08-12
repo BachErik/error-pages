@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>500: Internal Server Error</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="helper.js"></script>
     <!-- Playful Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
@@ -113,7 +114,7 @@
         <p>Oops! Our server encountered an internal error – time for a coffee break.</p>
         <!-- Random humorous quote -->
         <p id="random-quote"></p>
-        <button onclick="goHome()">Return Home</button>
+        <button onclick="redirectHomepage()">Return Home</button>
 
         <!-- Confetti elements -->
         <div class="confetti" style="left:10%; animation-duration: 2.5s; animation-delay: 0s;"></div>
@@ -124,19 +125,8 @@
     </div>
 
     <script>
-        function goHome() {
-            window.location.href = 'https://bacherik.de';
-        }
-        const quotes = [
-            "Oops! Even servers need a break.",
-            "500: The server is on a coffee break.",
-            "Internal error – our server is having a bad day.",
-            "Error 500: Sometimes, even code takes a vacation.",
-            "The server is burning the midnight oil – please try again later."
-        ];
         document.addEventListener('DOMContentLoaded', function () {
-            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-            document.getElementById('random-quote').textContent = randomQuote;
+            document.getElementById('random-quote').textContent = getQuote(500);
         });
     </script>
 </body>
